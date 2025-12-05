@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Zone - Healthy Smiles</title>
+
+    <meta name="description" content="Play games, watch videos, and build healthy brushing habits in the Healthy Smiles Fun Zone.">
+    <meta name="keywords" content="fun dental activities, brushing video, oral health games, kids teeth">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,12 +25,212 @@
     <a href="fun.html">Fun Zone</a>
 </nav>
 
-<section class="page">
+<main class="page">
     <h2>Fun Zone</h2>
     <p>
-        Games, activities, coloring pages, and fun facts to make oral health exciting!
+        Games, videos, and activities to make learning about oral health fun!  
+        Brush along with the video, play a game, and test your brushing knowledge.
     </p>
-</section>
+
+    <!-- ====================== BRUSH ALONG VIDEO ========================== -->
+    <section class="fun-section">
+        <h3>Watch &amp; Brush Along!</h3>
+        <p>
+            Press play and brush your teeth along with the video. Try to brush for the entire
+            <strong>2 minutes</strong>!
+        </p>
+
+        <!-- YOUR VIDEO FILE brushing.mp4 MUST BE IN THE SAME FOLDER AS fun.html -->
+        <video controls class="fun-video" poster="brushing-thumb.jpg">
+            <source src="brushing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <p class="hint">Tip: Use gentle circles, brush your tongue, and take your time!</p>
+    </section>
+
+    <!-- ====================== GAME SECTION =============================== -->
+    <section class="fun-section">
+        <h3>Play a Tooth-Brushing Game</h3>
+        <p>
+            Visit Sesame Workshop’s fun brushing activities and games!  
+            Kids can practice healthy habits in a playful, interactive way.
+        </p>
+
+        <div class="game-card">
+            <a href="https://sesameworkshop.org/resources/brush-those-teeth/" target="_blank" rel="noopener">
+                <img src="sesame-game-thumb.png" alt="Sesame Workshop Brush Those Teeth Games" class="game-thumb">
+            </a>
+
+            <p>
+                Explore fun games, printable activities, and videos designed to help kids learn
+                the importance of caring for their teeth.
+            </p>
+
+            <p class="center">
+                <a class="btn-link"
+                   href="https://sesameworkshop.org/resources/brush-those-teeth/"
+                   target="_blank">
+                    Play Brushing Games
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ====================== INTERACTIVE QUIZ =========================== -->
+    <section class="fun-section">
+        <h3>Quick Quiz – True or False?</h3>
+        <p>Click an answer and see what happens!</p>
+
+        <!-- Q1 -->
+        <div class="quiz-question" data-answer="false">
+            <p>🦷 You only need to floss right before a dental appointment.</p>
+            <div class="quiz-buttons">
+                <button type="button" class="quiz-btn" data-choice="true">True</button>
+                <button type="button" class="quiz-btn" data-choice="false">False</button>
+            </div>
+            <p class="quiz-feedback"></p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-question" data-answer="true">
+            <p>🥤 Sipping soda slowly all day is worse for your teeth than drinking it quickly with a meal.</p>
+            <div class="quiz-buttons">
+                <button type="button" class="quiz-btn" data-choice="true">True</button>
+                <button type="button" class="quiz-btn" data-choice="false">False</button>
+            </div>
+            <p class="quiz-feedback"></p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-question" data-answer="false">
+            <p>🪥 Brushing harder always cleans better.</p>
+            <div class="quiz-buttons">
+                <button type="button" class="quiz-btn" data-choice="true">True</button>
+                <button type="button" class="quiz-btn" data-choice="false">False</button>
+            </div>
+            <p class="quiz-feedback"></p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-question" data-answer="true">
+            <p>🧼 Your toothbrush should be replaced every 3–4 months.</p>
+            <div class="quiz-buttons">
+                <button type="button" class="quiz-btn" data-choice="true">True</button>
+                <button type="button" class="quiz-btn" data-choice="false">False</button>
+            </div>
+            <p class="quiz-feedback"></p>
+        </div>
+    </section>
+
+    <!-- ====================== HABIT FORM =========================== -->
+    <section id="contact-form" class="fun-section">
+        <h3>Healthy Habits Planner</h3>
+        <p>
+            Fill out this simple form to reflect on your own brushing and flossing habits!  
+            (This form does not submit anywhere — it stays on the website.)
+        </p>
+
+        <form action="#" method="post" class="habit-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+                <label for="age-group">Age Group:</label>
+                <select id="age-group" name="age-group">
+                    <option value="">Select one</option>
+                    <option value="child">Child (6–12)</option>
+                    <option value="teen">Teen (13–17)</option>
+                    <option value="adult">Adult (18+)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="brushing-times">How many times do you brush each day?</label>
+                <input id="brushing-times" name="brushing-times" type="number" min="0" max="10">
+            </div>
+
+            <div class="form-group">
+                <label for="goal">What is one oral health goal you have?</label>
+                <textarea id="goal" name="goal" rows="3" placeholder="Example: brush for 2 minutes every morning."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (optional):</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com">
+            </div>
+
+            <button type="submit">Save My Healthy Habits</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <a href="faqs.html">FAQ's</a>
+    <a href="parent-info.html">Parent Resources</a>
+    <a href="contact.html">Contact Us</a>
+</footer>
+
+<!-- ======================================================================= -->
+<!-- ========================== QUIZ & CONFETTI JS ========================= -->
+<!-- ======================================================================= -->
+
+<script>
+    // Quiz logic
+    const questions = document.querySelectorAll('.quiz-question');
+
+    questions.forEach(question => {
+        const correctAnswer = question.getAttribute('data-answer');
+        const buttons = question.querySelectorAll('.quiz-btn');
+        const feedback = question.querySelector('.quiz-feedback');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const choice = button.getAttribute('data-choice');
+
+                // Reset buttons
+                buttons.forEach(b => b.classList.remove('correct', 'incorrect'));
+
+                if (choice === correctAnswer) {
+                    button.classList.add('correct');
+                    feedback.textContent = 'Correct! 🎉 Great job!';
+                    fireConfetti();
+                } else {
+                    button.classList.add('incorrect');
+                    feedback.textContent = 'Not quite. Try again!';
+                    flashRed();
+                }
+            });
+        });
+    });
+
+    // CONFETTI EFFECT
+    function fireConfetti() {
+        const container = document.createElement('div');
+        container.className = 'confetti-container';
+
+        for (let i = 0; i < 40; i++) {
+            const piece = document.createElement('span');
+            piece.className = 'confetti-piece';
+            piece.style.left = Math.random() * 100 + 'vw';
+            piece.style.animationDelay = Math.random() * 0.5 + 's';
+            container.appendChild(piece);
+        }
+
+        document.body.appendChild(container);
+
+        setTimeout(() => container.remove(), 1500);
+    }
+
+    // WRONG ANSWER FLASH
+    function flashRed() {
+        document.body.classList.add('flash-red');
+        setTimeout(() => document.body.classList.remove('flash-red'), 300);
+    }
+</script>
 
 </body>
 </html>
